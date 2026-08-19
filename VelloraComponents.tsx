@@ -210,7 +210,7 @@ export function CallControl({icon=<Icon name="Mic"/>,label='Microfone',state='De
 export type DesktopHeaderProps={active?:'Início'|'Especialistas'|'Agenda'|'Documentos';onActiveChange?:(v:'Início'|'Especialistas'|'Agenda'|'Documentos')=>void;onNotifications?:()=>void}
 export function DesktopHeader({active='Início',onActiveChange,onNotifications}:DesktopHeaderProps){
  const routes=['Início','Especialistas','Agenda','Documentos'] as const
- return <header className="vl-desktop-header"><div className="header-brand"><span className="header-mark"/><strong>Vellora</strong></div><nav aria-label="Navegação principal">{routes.map(r=><button key={r} className={active===r?'active':''} aria-current={active===r?'page':undefined} onClick={()=>onActiveChange?.(r)}>{r}</button>)}</nav><div className="header-actions"><IconButton icon={<Icon name="Bell" size={20}/>} accessibleLabel="Notificações" size="Medium" style="Ghost" onClick={onNotifications}/><Avatar initials="MA" size="Medium" status="Online"/></div></header>
+ return <header className="vl-desktop-header"><div className="header-brand"><img className="header-logo" src="/vellora-logo.svg" alt="Vellora"/></div><nav aria-label="Navegação principal">{routes.map(r=><button key={r} className={active===r?'active':''} aria-current={active===r?'page':undefined} onClick={()=>onActiveChange?.(r)}>{r}</button>)}</nav><div className="header-actions"><IconButton icon={<Icon name="Bell" size={20}/>} accessibleLabel="Notificações" size="Medium" style="Ghost" onClick={onNotifications}/><Avatar initials="MA" size="Medium" status="Online"/></div></header>
 }
 
 export const FigmaIcon=({name,size=24}:{name:IconName;size?:number})=><Icon name={name} size={size}/>

@@ -63,3 +63,7 @@ The previous flat-repository build path was already proven on Cloudflare. In thi
 ## Intentionally unresolved product/integration definitions
 
 See `FIGMA_GAPS.md`. Remaining unknowns are limited to governance metadata, field max lengths, Checkbox group aggregation, Switch persistence integration, Appointment action window, device timeout, face/camera thresholds and promotion of Bottom navigation into a published DS family.
+
+- **2.0.1 responsive correction:** Responsive Lab migrated from scroll-based containment to container-query reflow. QA frames at 320/375/599/600/767/768/1024/1440 px use zero horizontal scrolling. Hug-content Button no longer stretches to frame width; fill-container fields/cards/tabs resize to the available width. Edge Case Lab now has 20 px vertical spacing and consistent inset padding.
+
+- **Brand asset:** o placeholder do Desktop Header foi removido. `public/vellora-logo.svg` é o SVG fornecido para o Vellora e é usado diretamente pelo Header, sem redesenho ou substituição.

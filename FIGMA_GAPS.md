@@ -1,17 +1,15 @@
-# FIGMA GAPS — fields that still need product/design definition
+# FIGMA GAPS — definições intencionalmente não inventadas
 
-These are intentionally not invented in the playground.
+A release 2.0.0 fecha a paridade visual e comportamental verificável. Os itens abaixo dependem de decisão de produto, integração ou governança e permanecem explicitamente fora do contrato visual.
 
-1. **Per-component Status / Owner / component-specific version** — not defined in the inspected Figma component metadata. The page shows `UNKNOWN — NEEDS DEFINITION`.
-2. **Select option data** — `Select / Option` and the open-list composition now exist in Figma. Business option collections remain consumer-defined; no specialty list is encoded in the component contract.
-3. **Input max lengths** — defined per product field, not in the component family.
-4. **Textarea max length** — “500 caracteres” is explicitly an example; real limit is field-specific.
-5. **Checkbox Indeterminate group rule** — docs say next action follows the documented group rule, but no group rule is supplied.
-7. **Switch persistence contract** — failure must revert state, but API/backend persistence mechanism is not defined.
-8. **Tabs/List composition content** — Tab Item exists; additional tab labels and panel content are not specified.
-9. **Appointment action availability window** — action depends on a product-defined time window; the value is absent.
-10. **Device Check timeout thresholds** — Checking cannot be indefinite, but timeout values are absent.
-11. **Face Guidance thresholds** — stability/tracking thresholds belong to validated implementation and are absent.
-12. **Camera Guidance processing thresholds / real retry integration** — not defined.
-13. **Call Control Active copy** — Figma requires icon + label to change, but does not define separate `activeLabel` / `activeIcon` properties or the active label text. The playground leaves `activeLabel` empty until defined.
-14. **Desktop mobile replacement component** — docs require replacing Desktop Header below 768 px, but a corresponding published component is not defined on this component page.
+1. **Status / Owner / versão específica por componente** — não existem nos metadados inspecionados. O Playground mostra `UNKNOWN — NEEDS DEFINITION`; a versão `2.0.0` é da release do sistema.
+2. **Coleções de opções do Select** — `Select / Option` e a composição aberta existem; as opções de negócio continuam consumer-defined. Os exemplos do Playground são `EXAMPLE DATA`.
+3. **Limites de Input e Textarea** — são definidos por campo de produto. “500 caracteres” é example copy do Textarea e não define `maxLength`.
+4. **Regra de grupo para Checkbox Indeterminate** — o estado visual existe, mas a regra de agregação do grupo não está definida nesta família.
+5. **Persistência do Switch** — rollback é documentado; API/backend, timeout e copy de falha pertencem à integração.
+6. **Conteúdo de Tabs/List** — a composição existe; labels e painéis são conteúdo consumidor.
+7. **Janela temporal da ação do Appointment Card** — Upcoming/Today podem expor ação, mas o intervalo real é regra de produto.
+8. **Timeout do Device Check** — `Checking` não deve ser indefinido; o valor temporal é definido pela integração.
+9. **Thresholds de Face Guidance** — estabilidade/tracking pertencem à implementação validada.
+10. **Thresholds e retry real de Camera Guidance** — processamento, permissões e recovery pertencem ao fluxo consumidor.
+11. **Bottom navigation como família publicada** — o padrão existe nas telas mobile do produto, mas não é uma família publicada nesta release do Design System.

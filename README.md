@@ -1,14 +1,37 @@
-# Vellora Developer Playground v3
+# Vellora Developer Playground 2.0.0
 
-React + TypeScript + Vite. Source-of-truth visual/contract data was extracted from the Vellora Figma file.
+Portal de engenharia do Vellora Design System, em React + TypeScript + Vite. O repositório mantém o contrato Figma ↔ Code ↔ Playground explícito, com componentes executáveis, State Labs, Responsive Lab, Edge Case Lab, acessibilidade, tokens, padrões e changelog.
 
-## Cloudflare Pages
+## Inventário atual
+
+- 20 famílias principais de componentes.
+- 227 variantes nas famílias principais.
+- 8 variantes de `Select / Option`.
+- 235 variant nodes documentados no total.
+- 39 ícones autorais.
+- Composições formalizadas: Select aberto, Radio Group e Tabs/List.
+- Baseline histórico preservado: 18 famílias / 213 variantes.
+
+## Regras de paridade
+
+- Previews de componentes usam dimensões reais do Figma; não são thumbnails escaladas.
+- Controls expõem apenas a API pública documentada.
+- Estados de referência são separados da interação real quando necessário.
+- `EXAMPLE DATA` nunca é tratado como regra de produto.
+- Thresholds, timeouts, max lengths, owners e regras de negócio ausentes permanecem `UNKNOWN — NEEDS DEFINITION`.
+- Ícones usam os paths derivados dos masters do Vellora; não há biblioteca externa de ícones.
+
+## Cloudflare Workers Builds
+
+Repositório flat: os arquivos `.tsx`, `system.ts`, `app.css` e `tokens.css` ficam diretamente na raiz.
 
 - Production branch: `main`
+- Root directory: vazio
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: repository root
-- Node: `.node-version` = `22.16.0`
+- Deploy command: `npx wrangler deploy`
+- Build output: `dist`
+- Node: `.node-version` = `22.23.2`
+- `index.html` aponta para `/main.tsx`
 
 ## Local
 
@@ -19,26 +42,6 @@ npm run build
 npm run dev
 ```
 
-## Rules
+## Release 2.0.0
 
-- Component previews are 1:1 at their Figma desktop dimensions.
-- Hover/focus/pressed/click are real interactions; forced states are shown separately for reference.
-- No product option sets, clinical thresholds, timeout values, active-state copy, owners, or component statuses were fabricated.
-- Any Figma inconsistency is surfaced as MATCH / MISMATCH / UNKNOWN.
-- The 39 icon masters are encoded from the SVG paths exported from the Vellora Figma components; no external icon library is used.
-
-
-## Cloudflare Workers Builds
-
-Este projeto está preparado para deploy em `*.workers.dev`.
-
-Configuração recomendada no Cloudflare:
-
-- Build command: `npm run build`
-- Deploy command: `npm run deploy`
-- Production branch: `main`
-- Root directory: `/` (ou vazio, se o `package.json` estiver na raiz)
-
-O `wrangler.jsonc` publica `./dist` como Static Assets e usa `single-page-application` para o roteamento do React.
-
-- Focus source of truth: `color/border/focus = #008C95`, synchronized with current Figma documentation.
+Correções de contrato incluídas: 6 combinações válidas de Appointment Card; Icon Button sem estado toggle inventado; Call Control sem `activeLabel`/`activeIcon`; Tabs/List funcional; IDs únicos de campos; breakpoint Desktop Header em 768 px; State Labs completos; Responsive e Edge Case Labs; documentação de loading, max length, retry e thresholds separada da API visual.

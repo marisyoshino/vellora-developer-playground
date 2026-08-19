@@ -1,7 +1,6 @@
-VELLORA PLAYGROUND 1.3.1 — CLEAN FLAT REPOSITORY
+VELLORA DEVELOPER PLAYGROUND 2.0.0 — GIT-READY FLAT REPOSITORY
 
-Expected at repository root:
-public/
+Expected directly at repository root:
 App.tsx
 ComponentPage.tsx
 DocsPages.tsx
@@ -25,16 +24,20 @@ FIGMA_GAPS.md
 QA_REPORT.md
 README.md
 REPO_ROOT_CHECK.txt
+public/
 
 Inside public/:
 _headers
 
-Do NOT keep at root:
+Do NOT commit:
+node_modules/
+dist/
+.wrangler/
+*.tsbuildinfo
 download
 download (1)
-_headers
-*.tsbuildinfo
 
-Expected package version: 1.3.1
+Expected package version: 2.0.0
 Expected build command: vite build
 Expected index entry: /main.tsx
+Cloudflare Root directory: empty

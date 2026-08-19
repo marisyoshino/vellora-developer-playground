@@ -1,4 +1,4 @@
-VELLORA DEVELOPER PLAYGROUND 2.0.1 — GIT-READY FLAT REPOSITORY
+VELLORA DEVELOPER PLAYGROUND 2.0.3 — GIT-READY FLAT REPOSITORY
 
 Expected directly at repository root:
 App.tsx
@@ -37,11 +37,10 @@ dist/
 download
 download (1)
 
-Expected package version: 2.0.1
+Expected package version: 2.0.3
 Expected build command: vite build
 Expected index entry: /main.tsx
 Cloudflare Root directory: empty
 
 Inside public/:
 _headers
-vellora-logo.svg

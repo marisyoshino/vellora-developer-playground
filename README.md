@@ -1,4 +1,4 @@
-# Vellora Developer Playground 2.0.1
+# Vellora Developer Playground 2.0.3
 
 Portal de engenharia do Vellora Design System, em React + TypeScript + Vite. O repositório mantém o contrato Figma ↔ Code ↔ Playground explícito, com componentes executáveis, State Labs, Responsive Lab, Edge Case Lab, acessibilidade, tokens, padrões e changelog.
 
@@ -42,7 +42,7 @@ npm run build
 npm run dev
 ```
 
-## Release 2.0.1
+## Release 2.0.3
 
 Correções de contrato incluídas: 6 combinações válidas de Appointment Card; Icon Button sem estado toggle inventado; Call Control sem `activeLabel`/`activeIcon`; Tabs/List funcional; IDs únicos de campos; breakpoint Desktop Header em 768 px; State Labs completos; Responsive e Edge Case Labs; documentação de loading, max length, retry e thresholds separada da API visual.
 
@@ -51,4 +51,6 @@ Correções de contrato incluídas: 6 combinações válidas de Appointment Card
 - Responsive Lab usa container queries e não permite scroll horizontal nos frames de QA.
 - Edge Case Lab ganhou espaçamento interno/vertical consistente.
 - Button preserva comportamento Hug content no laboratório, em vez de esticar artificialmente.
-- Desktop Header usa o SVG oficial fornecido em `public/vellora-logo.svg`.
+- Desktop Header usa o SVG oficial fornecido, incorporado diretamente ao bundle para evitar falhas de asset/path no deploy.
+
+- Sidebar: o símbolo temporário “V” foi substituído pelo logo2 oficial fornecido, embutido no bundle.

@@ -1,1 +1,7 @@
-22.23.2
+node_modules/
+dist/
+.wrangler/
+*.tsbuildinfo
+.DS_Store
+download
+download (1)
